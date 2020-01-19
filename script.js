@@ -35,13 +35,22 @@ window.onload = function() {
     }
 
 
+    let user  = {
+        name: $('nm').value,
+        age: $('dt').value,
+        wt:  $('wt').value,
+        ht:  $('ht').value,
+        imt: Math.floor((this.wt / Math.pow(this.ht, 2) * 10000)),
+    };
+
+
+    $('calcB').onclick = function () {
+        alert("ку");
+    }
+
 
 };
 
-function calc() {
-    let wt = $('wt').value;
-    let ht = $('ht').value;
-    let imt = Math.floor((wt / Math.pow(ht, 2)) * 10000);
-    document.body.innerHTML = imt;
-}
+
+
 
